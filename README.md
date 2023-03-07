@@ -1,2 +1,17 @@
 # Miliman-Toy-Project
-Millian Toy Project with Electron
+
+Milliman Toy Project with Electron
+
+## Commit Convention
+
+- **feat** : 기능 추가, 삭제, 변경 _- 코드 수정 발생 시_
+- **design** : CSS등 사용자 UI 디자인 변경 _- 코드 수정 발생 시_
+- **fix** : 버그 수정 _- 코드 수정 발생 시_
+- **docs** : 문서 추가, 삭제, 변경 _- 코드 수정 없음_
+- **style** : 코드 형식, 정렬, 주석등의 변경, ex) 세미콜론 추가 _- 코드 수정 발생 시 (동작에 영향 없음)_
+- **refactor** : 코드 리팩토링 ex) renaming a variable _- 코드 수정 발생 시_
+- **test** : 테스트 코드 추가, 삭제, 변경 등 _- 코드 수정 없음 (테스트 코드에 관련된 모든 변경에 해당)_
+- **chore** : 패키지 매니저 설정, yarn 모듈 설치 등 _- 코드 수정 없음_
+- **etc** : 위에 해당하지 않는 모든 변경 ex) 빌드 스크립트 수정, 패키지 배포 설정 변경 _- 코드 수정 없음_
+- **rename** : 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 _- 코드 수정 없음_
+- **remove** : 파일을 삭제하는 작업만 수행한 경우 _- 코드 수정 없음_
