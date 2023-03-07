@@ -2,6 +2,8 @@
   "name": "milliman-toy-project",
   "version": "0.1.0",
   "private": true,
+  "main": "./public/electron.js",
+  "homepage": "",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -21,7 +23,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-renderer": "cross-env BROWSER=none npm run start",
+    "start-main": "electron .",
+    "compile-main": "tsc ./public/electron.ts",
+    "start-main-after-renderer": "wait-on http://localhost:3000 && npm run start-main",
+    "dev": "concurrently -n renderer, main 'npm:start-renderer' 'npm:start-main-after-renderer'",
+    "dist": "npm run build && electron-builder --dir",
+    "predist": "npm run compile-main"
   },
   "eslintConfig": {
     "extends": [
