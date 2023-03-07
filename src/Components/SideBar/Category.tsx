@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Resizable } from "re-resizable";
+import { Resizable, ResizeCallback } from "re-resizable";
 import { TreeItem, TreeView } from "@mui/lab";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -8,12 +8,14 @@ import "./Category.css";
 export default function Category() {
   const [height, setHeight] = useState(277);
 
+  const handleResizable: ResizeCallback = (event, direction, ref, delta) => {
+    setHeight(height + delta.height);
+  };
+
   return (
     <Resizable
       size={{ width: 230, height: height }}
-      onResizeStop={(event, direction, ref, delta) => {
-        setHeight(height + delta.height);
-      }}
+      onResizeStop={handleResizable}
       enable={{
         top: false,
         right: false,
