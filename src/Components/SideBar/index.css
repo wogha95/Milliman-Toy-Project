@@ -1,0 +1,17 @@
+.ant-collapse-header {
+  height: 23px !important;
+  background-color: gray !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: flex;
+  align-items: center !important;
+}
+
+.ant-collapse-content {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.ant-collapse-content-box {
+  padding: 0 !important;
+}

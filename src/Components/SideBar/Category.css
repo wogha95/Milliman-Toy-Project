@@ -1,0 +1,8 @@
+.MuiTreeItem-content {
+  padding: 0 !important;
+}
+
+.MuiTreeItem-label {
+  font-family: "inter" !important;
+  font-size: 10px !important;
+}
