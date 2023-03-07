@@ -25,10 +25,6 @@ function createMainWindow(): void {
 
   mainWindow.loadURL(isDev ? baseUrl : mainWindowUrl);
 
-  // if (isDev) {
-  //   mainWindow.webContents.openDevTools();
-  // }
-
   mainWindow.on("closed", (): void => {
     mainWindow = null;
   });
